@@ -6,7 +6,7 @@ import java.util.Scanner;
 import java.util.Arrays;
 
 public class D2 {
-    public static void runD2P1 (){
+    public static void runD2 (){
 
         Scanner scanner = new Scanner(System.in);
 
@@ -80,6 +80,7 @@ public class D2 {
         return true;
     }
 
+    //technically dampner, but doesn't need to be commented out
     private static int[] removeElement(int[] array, int index) {
         int[] result = new int[array.length - 1];
         for (int i = 0, j = 0; i < array.length; i++) {
