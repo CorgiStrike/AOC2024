@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class D1P1 {
-    public static void runBigNumbers(){
+    public static void runD1P1(){
         Scanner scanner = new Scanner(System.in);
 
         int n = 2000;
