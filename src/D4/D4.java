@@ -10,7 +10,7 @@ public class D4 {
         
         String filePath = "/Users/martinsanin/GitHub/AOC2024/src/inputs/D4input.txt";
 
-        ArrayList<String> input = new ArrayList();
+        ArrayList<String> input = new ArrayList<>();
 
         try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
             String line;
@@ -24,7 +24,8 @@ public class D4 {
 
         String[] grid = input.toArray(new String[0]);
 
-        String target = "XMAS";
+        //String target = "XMAS";
+        String target = "MAS";
         int count = countOccurrences(grid, target);
 
         System.out.println(count);
@@ -36,10 +37,10 @@ public class D4 {
         int count = 0;
 
         int[][] directions = {
-            {0, 1},   // Horizontal right
-            {0, -1},  // Horizontal left
-            {1, 0},   // Vertical down
-            {-1, 0},  // Vertical up
+            //{0, 1},   // Horizontal right
+            //{0, -1},  // Horizontal left
+            //{1, 0},   // Vertical down
+            //{-1, 0},  // Vertical up
             {1, 1},   // Diagonal down-right
             {1, -1},  // Diagonal down-left
             {-1, 1},  // Diagonal up-right
@@ -48,11 +49,10 @@ public class D4 {
 
         for (int r = 0; r < rows; r++) {
             for (int c = 0; c < cols; c++) {
-                for (int[] direction : directions) {
+                    //setup direction, setup or statement to check if backwards works too, inner statement to check the otehr side or inverse
                     if (matches(grid, r, c, target, direction)) {
                         count++;
                     }
-                }
             }
         }
 
